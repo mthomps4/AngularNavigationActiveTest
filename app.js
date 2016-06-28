@@ -20,3 +20,10 @@ navApp.config(function($routeProvider){
 navApp.directive('fooNav', function(){
  return { templateUrl: "nav.html"};
 });
+
+navApp.controller('active', function($scope, $location){
+  $scope.isActive = function (viewLocation) {
+     var active = (viewLocation === $location.path());
+     return active;
+    };
+});
