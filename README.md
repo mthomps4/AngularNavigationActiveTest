@@ -3,14 +3,13 @@ Testing Navigation ng-class="active" with controllers and directives.
 
 #Solution
 **in Navigation partial:**
-    `<nav id='nav' ng-controller="active">    
-        <ul>    
-            <li><a ng-class="{ active: isActive('/') }" href="#/">Home</a></li>    
-            <li><a ng-class="{ active: isActive('/about') }" href="#/about">About</a></li>    
-            <li><a ng-class="{ active: isActive('/contact') }" href="#/contact">Contact</a></li>    
-        </ul>    
-    </nav>`    
-
+ `<nav id='nav' ng-controller="active">`     
+ `<ul>`    
+ `<li><a ng-class="{ active: isActive('/') }" href="#/">Home</a></li>`    
+ `<li><a ng-class="{ active: isActive('/about') }" href="#/about">About</a></li>`    
+ `<li><a ng-class="{ active: isActive('/contact') }" href="#/contact">Contact</a></li>`    
+ `</ul>`        
+ `</nav>`    
 
 **Controller**
 - var navApp = angular.module('navApp',["ngRoute"]);
@@ -22,5 +21,5 @@ Testing Navigation ng-class="active" with controllers and directives.
         };
     });     
 
-**CSS**
-    .active{ insert styles here };
+**CSS**    
+`.active{ insert styles here };`
